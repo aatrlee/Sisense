@@ -1,0 +1,57 @@
+{
+    "style": ".blox-slides:first-child .blox-pivot-title{display:block; !important;} .blox-slides .blox-pivot-title{margin-bottom:10px; font-weight:bold; color:black; font-size:1em}",
+    "showCarousel": false,
+    "titleStyle": [
+        {
+            "display": "none"
+        }
+    ],
+    "body": [
+        {
+            "type": "Column",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "class": "blox-pivot-title",
+                    "separator": true,
+                    "weight": "bold",
+                    "hidden": "true",
+                    "horizontalAlignment": "center",
+                    "text": "YourHeader"
+                },
+                {
+                    "type": "Container",
+                    "spacing": "none",
+                    "width": "150px",
+                    "items": [
+                        {
+                            "type": "ActionSet",
+                            "actions": [
+                                {
+                                    "type": "JTD",
+                                    "title": "{panel:YourPanel}",
+                                    "data": {
+                                        "dashboardId": "XYZ",
+                                        "panelsToInclude": [
+                                            {
+                                                "panel": "YourPanel",
+                                                "value": "{panel:YourPanel}"
+                                            }
+                                        ],
+                                        "args": {
+                                            "displayDashboardsPane": false,
+                                            "displayFilterPane": true,
+                                            "includeFilterDims": [
+                                                "[YourElasticubeTableName.YourPanel]"
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
